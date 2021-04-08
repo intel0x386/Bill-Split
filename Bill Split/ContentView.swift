@@ -12,8 +12,7 @@ struct ContentView: View {
    
    init() {
       print("ContentView created")
-      //UITableView.appearance().backgroundColor = .clear
-      //UITableView.appearance().separatorStyle = .none
+      UITableView.appearance().backgroundColor = UIColor(red: 0, green: 0, blue: 0.3, alpha: 0.5)
    }
    
    @State private var checkAmount = "100"
@@ -64,7 +63,7 @@ struct ContentView: View {
       }
       
       
-      var amountTextField = TextField("100 \(currencyUnit)", text: $checkAmount)
+      let amountTextField = TextField("100 \(currencyUnit)", text: $checkAmount)
          .frame(width: 100, height: 32, alignment: .center)
          .multilineTextAlignment(.center)
          .background(Color(red: 0.1, green: 0.1, blue: 0.1, opacity: 0.1))
@@ -76,9 +75,6 @@ struct ContentView: View {
          
          
          Form {
-            
-            
-            
             
             Section {
                
@@ -180,7 +176,6 @@ struct ContentView: View {
             
             Section(header: Text("Amount per person:")) {
                
-               
                HStack {
                   Text("Amount per person")
                   Spacer()
@@ -188,8 +183,9 @@ struct ContentView: View {
                   Text(currencyUnit)
                      .frame(width: 20)
                }
-               .foregroundColor(.black)
-               .font(Font.system(.title2))
+                  .foregroundColor(.black)
+                  .font(.title2)
+               
                
                /*
                HStack {
@@ -249,6 +245,7 @@ struct ContentView: View {
             .foregroundColor(Color.gray)
             
          } // End of Form
+         
          .navigationBarTitleDisplayMode(.inline)
          .navigationTitle("Check Split")
          
