@@ -12,7 +12,8 @@ struct ContentView: View {
    
    init() {
       print("ContentView created")
-      UITableView.appearance().backgroundColor = UIColor(red: 0, green: 0, blue: 0.3, alpha: 0.5)
+      //UITableView.appearance().backgroundColor = UIColor(red: 0.996, green: 0.553, blue: 0.552, alpha: 1)
+      UITableView.appearance().backgroundColor = UIColor(red: 0.04, green: 0.239, blue: 0.137, alpha: 1)
    }
    
    @State private var checkAmount = "100"
@@ -71,6 +72,8 @@ struct ContentView: View {
          .font(.body)
          .keyboardType(.decimalPad)
       
+      let bgColor = Color(red: 0.08, green: 0.392, blue: 0.224)
+      
       return NavigationView {
          
          
@@ -88,6 +91,8 @@ struct ContentView: View {
                      .frame(width: 20)
                      .onTapGesture { hideKeyboard() }
                }
+               //.listRowBackground(Color(red: 0.992, green: 0.369, blue: 0.325))
+               
                
                HStack {
                   Group {
@@ -106,8 +111,10 @@ struct ContentView: View {
                      .frame(width: 20)
                      .onTapGesture { hideKeyboard() }
                }
+               
             } // Amount Section ends here
-            
+            .listRowBackground(bgColor)
+            .foregroundColor(.white)
             
             Section(header: Text("How much Tip do you want to leave?")) {
 
@@ -133,7 +140,7 @@ struct ContentView: View {
                      .frame(width: 20)
                      .onTapGesture { hideKeyboard() }
                }
-                  .foregroundColor(percentOverAmount ? Color.black : Color.gray)
+                  .foregroundColor(percentOverAmount ? Color.white : Color.gray)
                   
                Text("- or -")
                   .frame(maxWidth: .infinity)
@@ -168,10 +175,11 @@ struct ContentView: View {
                      .frame(width: 20)
                      .onTapGesture { hideKeyboard() }
                }
-                  .foregroundColor(percentOverAmount ? Color.gray : Color.black)
+                  .foregroundColor(percentOverAmount ? Color.gray : Color.white)
                   
             } // Tip Section Ends Here
-            
+            .listRowBackground(bgColor)
+            .foregroundColor(.white)
             
             
             Section(header: Text("Amount per person:")) {
@@ -185,6 +193,7 @@ struct ContentView: View {
                }
                   .foregroundColor(.black)
                   .font(.title2)
+               .listRowBackground(Color(red: 0.16, green: 0.843, blue: 0.486))
                
                
                /*
@@ -237,13 +246,15 @@ struct ContentView: View {
                }
                
             }
+            .listRowBackground(bgColor)
+            
             .contentShape(Rectangle())
             .padding(0)
             .onTapGesture {
                hideKeyboard()
             }
             .foregroundColor(Color.gray)
-            
+            .foregroundColor(.white)
          } // End of Form
          
          .navigationBarTitleDisplayMode(.inline)
