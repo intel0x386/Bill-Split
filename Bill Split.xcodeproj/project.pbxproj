@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3B1EDD264AF45B00360089 /* BillRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B1EDC264AF45B00360089 /* BillRecords.swift */; };
+		5E3B1EDF264AF8C200360089 /* PreviousBillSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B1EDE264AF8C200360089 /* PreviousBillSheet.swift */; };
+		5E65A4AF264A7B0300FFBF4A /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4AE264A7B0300FFBF4A /* Symbols.swift */; };
+		5E65A4B6264AECCF00FFBF4A /* PersonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E069098264A6AA800C7B293 /* PersonRow.swift */; };
+		5E65A4B7264AECD200FFBF4A /* TipPercentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4B0264A907300FFBF4A /* TipPercentRow.swift */; };
+		5E65A4B8264AECD600FFBF4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CB0C2618541400E02B66 /* ContentView.swift */; };
+		5E65A4B9264AECD900FFBF4A /* TotalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4B2264AEA2300FFBF4A /* TotalRow.swift */; };
+		5E65A4BA264AECDB00FFBF4A /* CheckAmountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4AC264A78DE00FFBF4A /* CheckAmountRow.swift */; };
 		5E95CB092618541400E02B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CB082618541400E02B66 /* AppDelegate.swift */; };
 		5E95CB0B2618541400E02B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CB0A2618541400E02B66 /* SceneDelegate.swift */; };
-		5E95CB0D2618541400E02B66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CB0C2618541400E02B66 /* ContentView.swift */; };
 		5E95CB0F2618541C00E02B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CB0E2618541C00E02B66 /* Assets.xcassets */; };
 		5E95CB122618541C00E02B66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CB112618541C00E02B66 /* Preview Assets.xcassets */; };
 		5E95CB152618541C00E02B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CB132618541C00E02B66 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E069098264A6AA800C7B293 /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
+		5E3B1EDC264AF45B00360089 /* BillRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BillRecords.swift; path = "Bill Split/View/BillRecords.swift"; sourceTree = SOURCE_ROOT; };
+		5E3B1EDE264AF8C200360089 /* PreviousBillSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousBillSheet.swift; sourceTree = SOURCE_ROOT; };
+		5E65A4AC264A78DE00FFBF4A /* CheckAmountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckAmountRow.swift; path = "/Users/ankitshah/HackingWithSwift/Bill Split/Bill Split/View/CheckAmountRow.swift"; sourceTree = "<absolute>"; };
+		5E65A4AE264A7B0300FFBF4A /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		5E65A4B0264A907300FFBF4A /* TipPercentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipPercentRow.swift; path = "Bill Split/View/TipPercentRow.swift"; sourceTree = SOURCE_ROOT; };
+		5E65A4B2264AEA2300FFBF4A /* TotalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TotalRow.swift; path = "Bill Split/View/TotalRow.swift"; sourceTree = SOURCE_ROOT; };
 		5E95CB052618541400E02B66 /* Bill Split.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bill Split.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E95CB082618541400E02B66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E95CB0A2618541400E02B66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5E95CB0C2618541400E02B66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5E95CB0C2618541400E02B66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "Bill Split/View/ContentView.swift"; sourceTree = SOURCE_ROOT; };
 		5E95CB0E2618541C00E02B66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E95CB112618541C00E02B66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E95CB142618541C00E02B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +51,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E3B1EDB264AED2300360089 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E3B1EDC264AF45B00360089 /* BillRecords.swift */,
+				5E65A4AE264A7B0300FFBF4A /* Symbols.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E65A4B4264AEA8500FFBF4A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5E95CB132618541C00E02B66 /* LaunchScreen.storyboard */,
+				5E95CB0A2618541400E02B66 /* SceneDelegate.swift */,
+				5E95CB082618541400E02B66 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5E65A4B5264AEA9A00FFBF4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E3B1EDE264AF8C200360089 /* PreviousBillSheet.swift */,
+				5E069098264A6AA800C7B293 /* PersonRow.swift */,
+				5E65A4B0264A907300FFBF4A /* TipPercentRow.swift */,
+				5E95CB0C2618541400E02B66 /* ContentView.swift */,
+				5E65A4B2264AEA2300FFBF4A /* TotalRow.swift */,
+				5E65A4AC264A78DE00FFBF4A /* CheckAmountRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5E95CAFC2618541400E02B66 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +102,10 @@
 		5E95CB072618541400E02B66 /* Bill Split */ = {
 			isa = PBXGroup;
 			children = (
-				5E95CB082618541400E02B66 /* AppDelegate.swift */,
-				5E95CB0A2618541400E02B66 /* SceneDelegate.swift */,
-				5E95CB0C2618541400E02B66 /* ContentView.swift */,
+				5E3B1EDB264AED2300360089 /* Model */,
+				5E65A4B5264AEA9A00FFBF4A /* View */,
+				5E65A4B4264AEA8500FFBF4A /* App */,
 				5E95CB0E2618541C00E02B66 /* Assets.xcassets */,
-				5E95CB132618541C00E02B66 /* LaunchScreen.storyboard */,
 				5E95CB162618541C00E02B66 /* Info.plist */,
 				5E95CB102618541C00E02B66 /* Preview Content */,
 			);
@@ -146,8 +191,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E95CB092618541400E02B66 /* AppDelegate.swift in Sources */,
+				5E65A4BA264AECDB00FFBF4A /* CheckAmountRow.swift in Sources */,
+				5E65A4B6264AECCF00FFBF4A /* PersonRow.swift in Sources */,
+				5E65A4B8264AECD600FFBF4A /* ContentView.swift in Sources */,
+				5E3B1EDD264AF45B00360089 /* BillRecords.swift in Sources */,
 				5E95CB0B2618541400E02B66 /* SceneDelegate.swift in Sources */,
-				5E95CB0D2618541400E02B66 /* ContentView.swift in Sources */,
+				5E65A4B7264AECD200FFBF4A /* TipPercentRow.swift in Sources */,
+				5E3B1EDF264AF8C200360089 /* PreviousBillSheet.swift in Sources */,
+				5E65A4B9264AECD900FFBF4A /* TotalRow.swift in Sources */,
+				5E65A4AF264A7B0300FFBF4A /* Symbols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
