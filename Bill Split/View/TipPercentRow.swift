@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TipPercentRow: View {
 	
-	@Binding var tipPercent: Int
+	@Binding var record: BillRecord
 	
 	var body: some View {
 		Group {
@@ -20,16 +20,16 @@ struct TipPercentRow: View {
 				Spacer()
 				
 				Menu {
-					Picker("Tip Percentage", selection: $tipPercent) {
+					Picker("Tip Percentage", selection: $record.tipPercent) {
 						ForEach (0..<101) { num in
 							Text("\(num) %")
 						}
 					}
 				} label: {
-					NumberBox(text: "\(tipPercent)", frameWidth: 80)
+					NumberBox(text: "\(record.tipPercent)", frameWidth: 80)
 				}
 
-				Stepper("Tip Percentage", value: $tipPercent, in: 0...100, step: 5)
+				Stepper("Tip Percentage", value: $record.tipPercent, in: 0...100, step: 5)
 					
 					.labelsHidden()
 				
@@ -41,6 +41,6 @@ struct TipPercentRow: View {
 
 struct TipPercentRow_Previews: PreviewProvider {
     static var previews: some View {
-			TipPercentRow(tipPercent: .constant(25))
+			TipPercentRow(record: .constant(BillRecord(persons: 2, tipPercent: 20, checkAmount: "2799")))
     }
 }

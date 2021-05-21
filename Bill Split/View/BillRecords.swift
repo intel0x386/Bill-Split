@@ -13,6 +13,16 @@ struct BillRecord: Identifiable, Codable {
 	var checkAmount: String
 	var date: Date = Date()
 	var id = UUID()
+	
+	var amountPerPerson: String {
+		get {
+			let checkAmountDouble = Double(checkAmount) ?? 0
+			let totalAmt: Double = checkAmountDouble + checkAmountDouble * Double(tipPercent) / 100
+			let perPerson = totalAmt / Double((persons + 2))
+			return String(format: "%.1f", perPerson)
+		}
+	}
+	
 }
 
 extension BillRecord {
@@ -53,12 +63,23 @@ class BillRecords: ObservableObject, Identifiable {
 		records = []
 	}
 	
-	func storeRecord(record: BillRecord) {
-		records.append(BillRecord(record: record))
-		print("Saving \(record.checkAmount)-\(record.persons)")
+	func deleteRecord(indexSet: IndexSet) {
+		if let indFirst = indexSet.first {
+			records.remove(at: indFirst)
+			saveRecords()
+		}
+	}
+	
+	func saveRecords() {
 		let jsonE = JSONEncoder()
 		if let data = try? jsonE.encode(records) {
 			UserDefaults.standard.setValue(data, forKey: SymbolsAndConstants.key)
 		}
+	}
+	
+	func storeRecord(record: BillRecord) {
+		records.append(BillRecord(record: record))
+		print("Saving \(record.checkAmount)-\(record.persons)")
+		saveRecords()
 	}
 }

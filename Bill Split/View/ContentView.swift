@@ -13,6 +13,7 @@ struct ContentView: View {
 	@State var billRecord = BillRecord(persons: 0, tipPercent: 15, checkAmount: "")
 	@State var showPreviousBillSheet = false
 	@Environment(\.presentationMode) var pMode
+	@State var showSaveAlert = false
 	
 	var body: some View {
 		NavigationView {
@@ -29,10 +30,10 @@ struct ContentView: View {
 				
 				VStack(spacing: 20) {
 					
-					PersonRow(persons: $billRecord.persons)
+					PersonRow(record: $billRecord)
 					CheckAmountRow(checkAmount: $billRecord.checkAmount)
-					TipPercentRow(tipPercent: $billRecord.tipPercent)
-					TotalRow(persons: $billRecord.persons, checkAmount: $billRecord.checkAmount, tipPercent: $billRecord.tipPercent)
+					TipPercentRow(record: $billRecord)
+					TotalRow(record: $billRecord)
 				}
 				.padding()
 				.background(Color("backgroundColor"))
@@ -44,9 +45,12 @@ struct ContentView: View {
 					Button(action: {
 						billRecord.date = Date()
 						allRecords.storeRecord(record: billRecord)
+						
+						showSaveAlert = true
 					}, label: {
 						Text("Save")
 					})
+					
 				}
 				
 				ToolbarItem(placement: .navigationBarLeading) {
@@ -61,6 +65,9 @@ struct ContentView: View {
 			.sheet(isPresented: $showPreviousBillSheet, content: {
 				PreviousBillSheet()
 			})
+			.alert(isPresented: $showSaveAlert) {
+				Alert(title: Text("Check Details Saved!"), message: Text("Browse the past checks by clicking the Previous Bills button"), dismissButton: .default(Text("Okay")))
+			}
 		} // Navigation View ends
 		
 	}
@@ -68,8 +75,14 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
    static var previews: some View {
-      ContentView()
+		Group {
+			ContentView()
 				.environmentObject(BillRecords())
+			ContentView()
+				.preferredColorScheme(.dark)
+				.environmentObject(BillRecords())
+		}
+				
    }
 }
 

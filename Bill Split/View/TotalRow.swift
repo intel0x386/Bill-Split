@@ -9,18 +9,7 @@ import SwiftUI
 
 struct TotalRow: View {
 	
-	@Binding var persons: Int
-	@Binding var checkAmount: String
-	@Binding var tipPercent: Int
-	
-	var AmountPerPerson: String {
-		get {
-			let checkAmountDouble = Double(checkAmount) ?? 0
-			let totalAmt: Double = checkAmountDouble + checkAmountDouble * Double(tipPercent) / 100
-			let perPerson = totalAmt / Double((persons + 2))
-			return String(format: "%.1f", perPerson)
-		}
-	}
+	@Binding var record: BillRecord
 	
 	var body: some View {
 		HStack {
@@ -29,7 +18,7 @@ struct TotalRow: View {
 				.font(.title3)
 				.fontWeight(.bold)
 			Spacer()
-			NumberBox(text: AmountPerPerson, frameWidth: 160)
+			NumberBox(text: record.amountPerPerson, frameWidth: 160)
 			Text("\(SymbolsAndConstants.currencyUnit)")
 				.font(.title)
 				
@@ -41,6 +30,6 @@ struct TotalRow: View {
 
 struct TotalRow_Previews: PreviewProvider {
 	static var previews: some View {
-		TotalRow(persons: .constant(2), checkAmount: .constant("2900"), tipPercent: .constant(25))
+		TotalRow(record: .constant(BillRecord(persons: 10, tipPercent: 20, checkAmount: "300000")))
 	}
 }

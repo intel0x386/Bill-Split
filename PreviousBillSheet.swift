@@ -18,28 +18,35 @@ struct PreviousBillSheet: View {
 	}()
 	
 	var body: some View {
-		NavigationView {
+		print("Body Recalculated PBS")
+		return NavigationView {
 
 			List {
-				ListRow(date: "Date", checkAmount: "Check Amount")
+				ListRow(date: "Date", checkAmount: "Check Amount", isBold: true)
 					.font(.system(.title2, design: .monospaced))
 					.padding(.vertical)
+					
 					
 				ForEach (allRecords.records) {
 					record in
 					NavigationLink(
-						destination: Text("Test"))
+						destination: BillDetails(record: record)
+							.foregroundColor(.primary)
+					)
 					{
 					let date = dateFormatter.string(from: record.date)
 							ListRow(date: date, checkAmount: record.checkAmount)
 						}
 				}
-				
+				.onDelete(perform: { indexSet in
+					allRecords.deleteRecord(indexSet: indexSet)
+				})
 			}
 			.padding(.all, 20)
 			.navigationTitle("Previous Checks")
 			.navigationBarTitleDisplayMode(.inline)
 			.foregroundColor(Color.accentColor)
+			
 		}
 	}
 }
@@ -47,6 +54,7 @@ struct PreviousBillSheet: View {
 struct ListRow: View {
 	var date: String
 	var checkAmount: String
+	var isBold = false
 	var body: some View {
 		HStack {
 			Text(date)
@@ -54,6 +62,7 @@ struct ListRow: View {
 			Text(checkAmount)
 			Text(SymbolsAndConstants.currencyUnit)
 		}
+		.font( isBold ? Font.title : Font.body)
 	}
 }
 

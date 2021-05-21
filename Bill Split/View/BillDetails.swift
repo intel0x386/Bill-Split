@@ -11,17 +11,23 @@ struct BillDetails: View {
 	var record: BillRecord
 	var body: some View {
 		Form {
-			Section(header: Text("Location:")) {
-				Text("Map View - coming soon")
-			}
+
 			Section(header: Text("Bill Details:")) {
 				List {
-					DetailViewRow(leftS: "Check Amount", rightS: "\(record.checkAmount) \(SymbolsAndConstants.currencyUnit)")
+					DetailViewRow(leftS: "Check Amount", rightS: "\(record.checkAmount) \(SymbolsAndConstants.currencyUnit) ")
 					DetailViewRow(leftS: "Number of People", rightS: "\(record.persons) ")
 					DetailViewRow(leftS: "Tip Percentage", rightS: "\(record.tipPercent)% ")
-					
+					DetailViewRow(leftS: "Amount Per Person", rightS: "\(record.amountPerPerson) \(SymbolsAndConstants.currencyUnit) ")
 				}
+				.foregroundColor(.accentColor)
 			}
+			Section(header: Text("Location:")) {
+				Text("Map View - Coming Soon")
+					.foregroundColor(.secondary)
+			}
+		}
+		.onAppear {
+//			print("Type: \(type(of: body))")
 		}
 	}
 }
@@ -34,6 +40,7 @@ struct DetailViewRow: View {
 			DetailViewRowText(title: leftS)
 			Spacer()
 			DetailViewRowText(title: rightS)
+				.body.bold()
 		}
 	}
 }
@@ -42,10 +49,11 @@ struct DetailViewRow: View {
 struct DetailViewRowText: View {
 	var title: String
 	
-	var body: some View {
+	var body: Text {
 		Text(title)
 			.kerning(1)
 			.font(.body)
+			
 	}
 }
 

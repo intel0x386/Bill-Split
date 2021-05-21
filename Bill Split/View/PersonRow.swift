@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PersonRow: View {
 	
-	@Binding var persons: Int
+	@Binding var record: BillRecord
 	
 	var body: some View {
 		Group {
@@ -17,15 +17,15 @@ struct PersonRow: View {
 				PeopleRowText()
 				Spacer()
 				Menu(content: {
-					Picker("Number of People", selection: $persons) {
+					Picker("Number of People", selection: $record.persons) {
 						ForEach (2..<51) { num in
 							Text("\(num) People")
 						}
 					}
 				}, label: {
-					NumberBox(text: "\(persons + 2)")
+					NumberBox(text: "\(record.persons + 2)")
 				})
-				Stepper("Num Of People", value: $persons, in: 0...48)
+				Stepper("Num Of People", value: $record.persons, in: 0...48)
 					.labelsHidden()
 			}
 			.modifier(RowModifier())
@@ -76,7 +76,7 @@ struct RowModifier: ViewModifier {
 
 struct PeopleRow_Previews: PreviewProvider {
     static var previews: some View {
-			PersonRow(persons: .constant(10))
+			PersonRow(record: .constant(BillRecord(persons: 10, tipPercent: 8, checkAmount: "299990")))
     }
 }
 
