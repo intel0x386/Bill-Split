@@ -19,20 +19,19 @@ struct PreviousBillSheet: View {
 	
 	var body: some View {
 		NavigationView {
-//			VStack(spacing: 20) {
+
 			List {
 				ListRow(date: "Date", checkAmount: "Check Amount")
 					.font(.system(.title2, design: .monospaced))
 					.padding(.vertical)
 					
-//				Divider()
-				ForEach (allRecords.records, id: \.persons) {
+				ForEach (allRecords.records) {
 					record in
-					let date = dateFormatter.string(from: record.date)
 					NavigationLink(
-						destination: Text("Destination"))
-						{
-						ListRow(date: date, checkAmount: record.checkAmount)
+						destination: Text("Test"))
+					{
+					let date = dateFormatter.string(from: record.date)
+							ListRow(date: date, checkAmount: record.checkAmount)
 						}
 				}
 				

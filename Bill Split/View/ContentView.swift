@@ -57,8 +57,11 @@ struct ContentView: View {
 					})
 				}
 				
-			}
-		}
+			} // toolbar ends
+			.sheet(isPresented: $showPreviousBillSheet, content: {
+				PreviousBillSheet()
+			})
+		} // Navigation View ends
 		
 	}
 }

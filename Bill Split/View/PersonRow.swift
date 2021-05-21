@@ -9,15 +9,12 @@ import SwiftUI
 
 struct PersonRow: View {
 	
-	
 	@Binding var persons: Int
 	
 	var body: some View {
 		Group {
 			HStack {
-				Text("Number of People")
-					.kerning(1)
-					.font(.body)
+				PeopleRowText()
 				Spacer()
 				Menu(content: {
 					Picker("Number of People", selection: $persons) {
@@ -32,6 +29,16 @@ struct PersonRow: View {
 					.labelsHidden()
 			}
 			.modifier(RowModifier())
+		}
+	}
+}
+
+struct PeopleRowText: View {
+	var body: some View {
+		Group {
+			Text("Number of People")
+				.kerning(1)
+				.font(.body)
 		}
 	}
 }
@@ -55,12 +62,6 @@ struct NumberBox: View {
 	}
 }
 
-struct NumberBoxMod: ViewModifier {
-	func body(content: Content) -> some View {
-		content
-	}
-}
-
 
 struct RowModifier: ViewModifier {
 	func body(content: Content) -> some View {
@@ -78,3 +79,4 @@ struct PeopleRow_Previews: PreviewProvider {
 			PersonRow(persons: .constant(10))
     }
 }
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E28A72E265754D2002902F3 /* BillDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E28A72D265754D2002902F3 /* BillDetails.swift */; };
 		5E3B1EDD264AF45B00360089 /* BillRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B1EDC264AF45B00360089 /* BillRecords.swift */; };
 		5E3B1EDF264AF8C200360089 /* PreviousBillSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B1EDE264AF8C200360089 /* PreviousBillSheet.swift */; };
 		5E65A4AF264A7B0300FFBF4A /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4AE264A7B0300FFBF4A /* Symbols.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		5E069098264A6AA800C7B293 /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
+		5E28A72D265754D2002902F3 /* BillDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetails.swift; sourceTree = "<group>"; };
 		5E3B1EDC264AF45B00360089 /* BillRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BillRecords.swift; path = "Bill Split/View/BillRecords.swift"; sourceTree = SOURCE_ROOT; };
 		5E3B1EDE264AF8C200360089 /* PreviousBillSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousBillSheet.swift; sourceTree = SOURCE_ROOT; };
 		5E65A4AC264A78DE00FFBF4A /* CheckAmountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckAmountRow.swift; path = "/Users/ankitshah/HackingWithSwift/Bill Split/Bill Split/View/CheckAmountRow.swift"; sourceTree = "<absolute>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				5E3B1EDE264AF8C200360089 /* PreviousBillSheet.swift */,
+				5E28A72D265754D2002902F3 /* BillDetails.swift */,
 				5E069098264A6AA800C7B293 /* PersonRow.swift */,
 				5E65A4B0264A907300FFBF4A /* TipPercentRow.swift */,
 				5E95CB0C2618541400E02B66 /* ContentView.swift */,
@@ -198,6 +201,7 @@
 				5E95CB0B2618541400E02B66 /* SceneDelegate.swift in Sources */,
 				5E65A4B7264AECD200FFBF4A /* TipPercentRow.swift in Sources */,
 				5E3B1EDF264AF8C200360089 /* PreviousBillSheet.swift in Sources */,
+				5E28A72E265754D2002902F3 /* BillDetails.swift in Sources */,
 				5E65A4B9264AECD900FFBF4A /* TotalRow.swift in Sources */,
 				5E65A4AF264A7B0300FFBF4A /* Symbols.swift in Sources */,
 			);
