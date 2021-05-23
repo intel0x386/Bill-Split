@@ -15,7 +15,7 @@ struct BillDetails: View {
 			Section(header: Text("Bill Details:")) {
 				List {
 					DetailViewRow(leftS: "Check Amount", rightS: "\(record.checkAmount) \(SymbolsAndConstants.currencyUnit) ")
-					DetailViewRow(leftS: "Number of People", rightS: "\(record.persons) ")
+					DetailViewRow(leftS: "Number of People", rightS: "\(record.persons+2) ")
 					DetailViewRow(leftS: "Tip Percentage", rightS: "\(record.tipPercent)% ")
 					DetailViewRow(leftS: "Amount Per Person", rightS: "\(record.amountPerPerson) \(SymbolsAndConstants.currencyUnit) ")
 				}
