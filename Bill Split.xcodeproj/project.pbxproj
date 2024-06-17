@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,12 +15,12 @@
 		5E65A4B7264AECD200FFBF4A /* TipPercentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4B0264A907300FFBF4A /* TipPercentRow.swift */; };
 		5E65A4B8264AECD600FFBF4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CB0C2618541400E02B66 /* ContentView.swift */; };
 		5E65A4B9264AECD900FFBF4A /* TotalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4B2264AEA2300FFBF4A /* TotalRow.swift */; };
-		5E65A4BA264AECDB00FFBF4A /* CheckAmountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E65A4AC264A78DE00FFBF4A /* CheckAmountRow.swift */; };
 		5E95CB092618541400E02B66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CB082618541400E02B66 /* AppDelegate.swift */; };
 		5E95CB0B2618541400E02B66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95CB0A2618541400E02B66 /* SceneDelegate.swift */; };
 		5E95CB0F2618541C00E02B66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CB0E2618541C00E02B66 /* Assets.xcassets */; };
 		5E95CB122618541C00E02B66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CB112618541C00E02B66 /* Preview Assets.xcassets */; };
 		5E95CB152618541C00E02B66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E95CB132618541C00E02B66 /* LaunchScreen.storyboard */; };
+		BC1D0B632C20770C008AE431 /* CheckAmountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D0B622C20770C008AE431 /* CheckAmountRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		5E28A72D265754D2002902F3 /* BillDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetails.swift; sourceTree = "<group>"; };
 		5E3B1EDC264AF45B00360089 /* BillRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BillRecords.swift; path = "Bill Split/View/BillRecords.swift"; sourceTree = SOURCE_ROOT; };
 		5E3B1EDE264AF8C200360089 /* PreviousBillSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousBillSheet.swift; sourceTree = SOURCE_ROOT; };
-		5E65A4AC264A78DE00FFBF4A /* CheckAmountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckAmountRow.swift; path = "/Users/ankitshah/HackingWithSwift/Bill Split/Bill Split/View/CheckAmountRow.swift"; sourceTree = "<absolute>"; };
 		5E65A4AE264A7B0300FFBF4A /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		5E65A4B0264A907300FFBF4A /* TipPercentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipPercentRow.swift; path = "Bill Split/View/TipPercentRow.swift"; sourceTree = SOURCE_ROOT; };
 		5E65A4B2264AEA2300FFBF4A /* TotalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TotalRow.swift; path = "Bill Split/View/TotalRow.swift"; sourceTree = SOURCE_ROOT; };
@@ -40,6 +39,7 @@
 		5E95CB112618541C00E02B66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E95CB142618541C00E02B66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E95CB162618541C00E02B66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1D0B622C20770C008AE431 /* CheckAmountRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckAmountRow.swift; path = "../../../../../Downloads/Bill-Split-main/Bill Split/View/CheckAmountRow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 				5E65A4B0264A907300FFBF4A /* TipPercentRow.swift */,
 				5E95CB0C2618541400E02B66 /* ContentView.swift */,
 				5E65A4B2264AEA2300FFBF4A /* TotalRow.swift */,
-				5E65A4AC264A78DE00FFBF4A /* CheckAmountRow.swift */,
+				BC1D0B622C20770C008AE431 /* CheckAmountRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,8 +149,9 @@
 		5E95CAFD2618541400E02B66 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					5E95CB042618541400E02B66 = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,8 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E95CB092618541400E02B66 /* AppDelegate.swift in Sources */,
-				5E65A4BA264AECDB00FFBF4A /* CheckAmountRow.swift in Sources */,
 				5E65A4B6264AECCF00FFBF4A /* PersonRow.swift in Sources */,
+				BC1D0B632C20770C008AE431 /* CheckAmountRow.swift in Sources */,
 				5E65A4B8264AECD600FFBF4A /* ContentView.swift in Sources */,
 				5E3B1EDD264AF45B00360089 /* BillRecords.swift in Sources */,
 				5E95CB0B2618541400E02B66 /* SceneDelegate.swift in Sources */,
@@ -225,6 +226,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -258,6 +260,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -286,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -319,6 +323,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
